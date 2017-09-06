@@ -27,7 +27,7 @@ gtin_regex = r"^(01)(?P<indicator>\d{1})(?P<company_prefix>\d{7})(?P<product_id>
 gtin_re = re.compile(gtin_regex)
 
 # The SSCC Regex pattern
-sscc_regex = r"^(00)(?P<indicator>\d{1})(?P<company_prefix>\d{7})(?P<serial>\d+)$"
+sscc_regex = r"^(00)(?P<indicator>\d{1})(?P<company_prefix>\d{7})(?P<serial>\d+)(?P<check_digit>\d{1})$"
 sscc_re = re.compile(sscc_regex)
 
 CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
