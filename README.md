@@ -1,5 +1,5 @@
 # gs12urn
-A conversion tool for GS1 inbound values into EPC URI values for Python 3.6 or later.
+A conversion tool for GS1 inbound values (wrapped in typical XML) into EPC URI values for Python 3.6 or later.
 
 
     Run `pip3 install -r requirements.txt` to install packages.
