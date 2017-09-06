@@ -44,7 +44,8 @@ def gs12urn_command(inbound_file, node_name, gtin_uri, sscc_uri):
     A GTIN/SSCC to URN conversion tool.
     Example typical usage:\n
         python3 gs12urn.py ./examples/inbound-sscc.xml \n
-        python3 gs12urn.py ./examples/inbound.xml
+        python3 gs12urn.py ./examples/inbound.xml \n
+        Output to file, append: > outbound-file.txt
     """
     doc = BeautifulSoup(inbound_file, "lxml")
     nodes = doc.findAll([node_name.lower()])
