@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<snm:SNMResponseMessage xmlns:snm="urn:tracelink:mapper:sl:serial_number_manager" xmlns:cmn="urn:tracelink:mapper:sl:commontypes">
+<snm:ControlFileHeader>
+<cmn:FileSenderNumber>7777776067348</cmn:FileSenderNumber>
+<cmn:FileReceiverNumber>8888884043540</cmn:FileReceiverNumber>
+<cmn:FileControlNumber>56800bV9u</cmn:FileControlNumber>
+<cmn:FileDate>2017-08-31</cmn:FileDate>
+<cmn:FileTime>10:37:14</cmn:FileTime>
+</snm:ControlFileHeader>
+<snm:MessageBody>
+<cmn:RequestId>20070830140222</cmn:RequestId>
+<cmn:NumberEncoding>AI(00)</cmn:NumberEncoding>
+<cmn:ObjectIdentifier>
+<cmn:CompanyPrefixObjectKey filterValue="3">0339822</cmn:CompanyPrefixObjectKey>
+</cmn:ObjectIdentifier>
+<cmn:Quantity>10</cmn:Quantity>
+<cmn:SerialNumberList>
+<cmn:SerialNumber>00303398220017116004</cmn:SerialNumber>
+<cmn:SerialNumber>00303398220017116011</cmn:SerialNumber>
+<cmn:SerialNumber>00303398220017116028</cmn:SerialNumber>
+<cmn:SerialNumber>00303398220017116035</cmn:SerialNumber>
+<cmn:SerialNumber>00303398220017116042</cmn:SerialNumber>
+<cmn:SerialNumber>00303398220017116059</cmn:SerialNumber>
+<cmn:SerialNumber>00303398220017116066</cmn:SerialNumber>
+<cmn:SerialNumber>00303398220017116073</cmn:SerialNumber>
+<cmn:SerialNumber>00303398220017116080</cmn:SerialNumber>
+<cmn:SerialNumber>00303398220017116097</cmn:SerialNumber>
+</cmn:SerialNumberList>
+</snm:MessageBody>
+</snm:SNMResponseMessage>
