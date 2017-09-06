@@ -17,18 +17,19 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
-import click
-from lxml import etree, objectify
-from bs4 import BeautifulSoup
 import re
+from lxml import etree, objectify
+import click
+from bs4 import BeautifulSoup
+
 
 # The GTIN regular expression pattern
-gtin_regex = r"^(01)(?P<indicator>\d{1})(?P<company_prefix>\d{7})(?P<product_id>\d{5})(?P<check_digit>\d{1})(21)(?P<serial>\d+)$"
-gtin_re = re.compile(gtin_regex)
+gtin_pattern = r"^(01)(?P<indicator>\d{1})(?P<company_prefix>\d{7})(?P<product_id>\d{5})(?P<check_digit>\d{1})(21)(?P<serial>\d+)$"
+gtin_re = re.compile(gtin_pattern)
 
 # The SSCC Regex pattern
-sscc_regex = r"^(00)(?P<indicator>\d{1})(?P<company_prefix>\d{7})(?P<serial>\d+)(?P<check_digit>\d{1})$"
-sscc_re = re.compile(sscc_regex)
+sscc_pattern = r"^(00)(?P<indicator>\d{1})(?P<company_prefix>\d{7})(?P<serial>\d+)(?P<check_digit>\d{1})$"
+sscc_re = re.compile(sscc_pattern)
 
 CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
 
