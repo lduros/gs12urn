@@ -18,7 +18,6 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 import re
-from lxml import etree, objectify
 import click
 from bs4 import BeautifulSoup
 
@@ -50,7 +49,7 @@ def gs12urn_command(inbound_file, node_name, gtin_uri, sscc_uri):
     doc = BeautifulSoup(inbound_file, "lxml")
     nodes = doc.findAll([node_name.lower()])
     for node in nodes:
-        convert_value_to_urn(node, gtin_uri, sscc_uri)
+        click.echo(convert_value_to_urn(node, gtin_uri, sscc_uri))
 
 
 def convert_value_to_urn(node, gtin_urn, sscc_urn):
@@ -60,10 +59,10 @@ def convert_value_to_urn(node, gtin_urn, sscc_urn):
     gtin_match = re.match(gtin_re, node.text)
     if gtin_match:
         # return so that we go no further.
-        return click.echo(convert_gtin_to_urn(gtin_match, gtin_urn))
+        return convert_gtin_to_urn(gtin_match, gtin_urn)
     sscc_match = re.match(sscc_re, node.text)
     if sscc_match:
-        return click.echo(convert_sscc_to_urn(sscc_match, sscc_urn))
+        return convert_sscc_to_urn(sscc_match, sscc_urn)
 
 
 def convert_gtin_to_urn(gtin, gtin_urn):
